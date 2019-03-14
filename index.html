@@ -1,14 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Fork Me! FCC: Test Suite Template</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
 
-  <body>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    <h1>Hello World! we are software developers! </h1>
-    <script  src="js/index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Fork Me! FCC: Test Suite Template</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bulma.min.css" />
+  <style>
+    html {
+      background-color: aquamarine;
+    }
+
+    .ratecontrol {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .dropdown {
+      padding: 5px;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-bottom: 10px;
+    }
+
+    .comment-text {
+      vertical-align: top;
+    }
+
+    textarea {
+      padding: 5px;
+    }
+    input {
+      padding: 5px;
+    }
+    .submit-button {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body class="">
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <div class="container">
+    <div>
+      <h1 id="title" class="title has-text-centered">Survey Form</h1>
+    </div>
+    <br />
+    <div class="box">
+      <p id="description" class=" has-text-centered">Let us know how we can improve freeCodeCamp</p>
+      <br />
+      <form id="survey-form">
+        <div class=" field has-text-centered">
+          <label id="name-label">Name:</label>
+          <input id="name" type="text" placeholder="Enter your name" required />
+        </div>
+        <div class=" field has-text-centered">
+          <label id="email-label">email:</label>
+          <input id="email" type="email" placeholder="Enter your email" required />
+        </div>
+        <div class=" field has-text-centered">
+          <label id="number-label">age:</label>
+          <input id="number" type="number" min="18" max="65" placeholder="Enter your age" required />
+        </div>
+        <div class="field has-text-centered">
+          <label>Which option best describes your current role?</label>
+          <select class="dropdown">
+            <option>Student</option>
+            <option value="">Full time job</option>
+            <option value="">Full time learner</option>
+            <option value="">prefer not to say</option>
+            <option value="">other</option>
+          </select>
+        </div>
+        <div class="has-text-centered">
+          <label>What do you like most in FCC:</label>
+          <select id="dropdown" class="dropdown">
+            <option>challenges</option>
+            <option value="">Projects</option>
+            <option value="">Community</option>
+            <option value="">Open source</option>
+          </select>
+        </div>
+        <br />
+        <div class="ratecontrol">
+          <label>How likely is that you would recommend freeCodeCamp to a friend?</label>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <div>
+            <label>Definitely</label>
+            <input type="radio" name="rate" value="5" />
+            <br />
+            <label>Maybe</label>
+            <input type="radio" name="rate" value="3" />
+            <br />
+            <label>not sure</label>
+            <input type="radio" name="rate" value="0" />
+            <br />
+          </div>
+        </div>
+        <br />
+        <div class="ratecontrol">
+          <label>Things that should be improved in the future</label>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <div style>
+            <label class="">Front-end projects</label>
+            <input type="checkbox" name="frontend" value="frontend" />
+            <br />
+            <label>Backend projects</label>
+            <input type="checkbox" name="backend" value="backend" />
+            <br />
+            <label>Data visualization</label>
+            <input type="checkbox" name="DV" value="DV" />
+            <br />
+            <label>Challenges</label>
+            <input type="checkbox" name="challenges" value="challenges" />
+            <br />
+            <label>Open Source community</label>
+            <input type="checkbox" name="OSCommunity" value="OSCommunity" />
+            <br />
+            <label>Gitter help rooms</label>
+            <input type="checkbox" name="Gitter" value="Gitter" />
+            <br />
+            <label>videos</label>
+            <input type="checkbox" name="videos" value=" videos" />
+            <br />
+          </div>
+        </div>
+        <br />
+        <div class=" field has-text-centered">
+          <label class="comment-text">Comments: </label>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <textarea rows="5" cols="40" placeholder="comment here..."></textarea>
+        </div>
+        <div class="has-text-centered submit-button">
+          <button id="submit" type="submit" class="button is-primary">submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+
 </html>
